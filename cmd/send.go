@@ -63,6 +63,14 @@ Example:
 			Info("Making DNS requests to transfer file")
 
 		for _, r := range requests {
+
+			log.WithFields(log.Fields{
+				"dnsProvider": dnsProvider,
+				"r":           r,
+				"dnsDomain":   dnsDomain,
+				"dns type":    dns.TypeA,
+			}).Info("Request")
+
 			//response := dnsclient.Lookup(dnsProvider, fmt.Sprintf(dnsDomain, r), dns.TypeA)
 			response := dnsclient.Lookup(dnsProvider, fmt.Sprintf("%s.%s", r, dnsDomain), dns.TypeA)
 
