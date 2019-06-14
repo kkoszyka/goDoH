@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sensepost/godoh/dnsclient"
+	"goDoH/dnsclient"
 
 	log "github.com/sirupsen/logrus"
 

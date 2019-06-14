@@ -10,9 +10,9 @@ import (
 	"time"
 
 	"github.com/miekg/dns"
-	"github.com/sensepost/godoh/dnsclient"
-	"github.com/sensepost/godoh/protocol"
-	"github.com/sensepost/godoh/utils"
+	"goDoH/dnsclient"
+	"goDoH/protocol"
+	"goDoH/utils"
 	"github.com/spf13/cobra"
 
 	log "github.com/sirupsen/logrus"

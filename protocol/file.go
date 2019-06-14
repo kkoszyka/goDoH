@@ -6,7 +6,7 @@ import (
 	"encoding/hex"
 	"os"
 
-	"github.com/sensepost/godoh/utils"
+	"goDoH/utils"
 )
 
 // File represents a file to be send over DNS.

@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/sensepost/godoh/dnsclient"
-	"github.com/sensepost/godoh/protocol"
+	"goDoH/dnsclient"
+	"goDoH/protocol"
 
 	"github.com/miekg/dns"
 	"github.com/spf13/cobra"
@@ -57,10 +57,11 @@ Example:
 
 		message := protocol.File{}
 		message.Prepare(&fileBuffer, fileInfo)
+
 		requests, successFlag := message.GetRequests()
 
 		log.WithFields(log.Fields{"file": sendCmdFileName, "size": fileSize, "requests": len(requests)}).
-			Info("Making DNS requests to transfer file")
+			Info("Making DNS requests to transfer file...")
 
 		for _, r := range requests {
 

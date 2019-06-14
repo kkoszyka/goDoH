@@ -5,12 +5,12 @@ BIN_NAME := godoh
 
 K := $(shell openssl rand -hex 16)
 V := $(shell git rev-parse --short HEAD)
-LD_FLAGS := -s -w -X=github.com/sensepost/godoh/cmd.Version=$(V)
+LD_FLAGS := -s -w -X=goDoH/cmd.Version=$(V)
 
 # set dnsDomain if set
 # Example: make dnsDomain=foo.bar
 ifneq ($(dnsDomain),)
-	LD_FLAGS := $(LD_FLAGS) -X=github.com/sensepost/godoh/cmd.dnsDomain=$(dnsDomain)
+	LD_FLAGS := $(LD_FLAGS) -X=goDoH/cmd.dnsDomain=$(dnsDomain)
 endif
 
 default: keywarn clean darwin linux windows pack integrity

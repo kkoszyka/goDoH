@@ -4,8 +4,8 @@ import (
 	"strconv"
 
 	"github.com/miekg/dns"
-	"github.com/sensepost/godoh/dnsserver"
-	"github.com/sensepost/godoh/protocol"
+	"goDoH/dnsserver"
+	"goDoH/protocol"
 	"github.com/spf13/cobra"
 
 	log "github.com/sirupsen/logrus"

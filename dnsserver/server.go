@@ -15,8 +15,8 @@ import (
 	"time"
 
 	"github.com/miekg/dns"
-	"github.com/sensepost/godoh/protocol"
-	"github.com/sensepost/godoh/utils"
+	"goDoH/protocol"
+	"goDoH/utils"
 
 	log "github.com/sirupsen/logrus"
 )

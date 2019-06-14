@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"time"
 
-	"github.com/sensepost/godoh/utils"
+	"goDoH/utils"
 )
 
 // Command represents a command to be send over DNS.

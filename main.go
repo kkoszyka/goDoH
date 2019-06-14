@@ -1,6 +1,6 @@
 package main
 
-import "github.com/sensepost/godoh/cmd"
+import "goDoH/cmd"
 
 func main() {
 	cmd.Execute()

@@ -7,7 +7,7 @@ import (
 	"github.com/miekg/dns"
 	"github.com/spf13/cobra"
 
-	"github.com/sensepost/godoh/dnsclient"
+	"goDoH/dnsclient"
 )
 
 var testCmdName string

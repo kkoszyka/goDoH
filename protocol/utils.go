@@ -6,7 +6,7 @@ import (
 	"hash/crc32"
 	"log"
 
-	"github.com/sensepost/godoh/utils"
+	"goDoH/utils"
 )
 
 // Requestify generates hostnames for DNS lookups
